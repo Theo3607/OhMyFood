@@ -1,7 +1,475 @@
-h1{
-    font-family: "Shrikhand";
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+*{
+    box-sizing: border-box;
 }
 
-p{
-    font-family: "Roboto";
+h1{
+    font-weight: bolder;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    margin:0
+}
+
+main{
+    padding: 0;
+}
+
+footer{
+    background-color: #353535;
+    color: white;
+}
+
+/* LOADING SPINNER */
+
+#loader {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #9356DC;
+    border-radius: 50%;
+    border-top: 16px solid #FF79DA;
+    -webkit-animation: spin 3s linear ;
+    animation: spin 3s ease-in ;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); opacity: 0; visibility: hidden;}
+  }
+
+
+/* Header */
+
+header {
+    position: relative;
+    display: flex;
+    box-shadow: 0px 1px 10px 4px #939393;
+}
+
+#logo{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: auto;
+}
+
+#logo img{
+    width: 250px;
+}
+
+/* Main */
+
+.localisation{
+    width: 100%;
+    background-color: #ECECEC;
+    display: flex;
+}
+
+.localisation .emplacement{
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    gap: 25px;
+    align-items: center;
+    margin: auto;
+    color: #3F3F3F;
+}
+
+.localisation .emplacement .fa-map-marker-alt{
+    font-size: 23px;
+}
+
+.localisation .emplacement h2{
+    font-weight: 500;
+    font-size: 21px;
+}
+
+.intro{
+    background-color: #F3F3F3;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.intro h1{
+    padding-top: 40px;
+    margin-top: 0;
+    font-size: 35px;
+}
+
+.intro p{
+    font-size: 18px;
+}
+
+.bouton-explorer{
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    background: linear-gradient(to bottom, #FF79DA, #9356DC) ;
+    margin-top: 20px;
+    border-radius: 30px;
+    width: auto;
+    margin: auto;
+    margin-top: 15px;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 7px 7px 20px 1px #939393;
+    cursor: pointer;
+}
+
+.bouton-explorer:hover{
+    opacity: 0.85;
+    box-shadow: 0px 1px 8px 2px #000000;
+    
+}
+
+/* Fonctionnement */
+
+.fonctionnement{
+    padding-bottom: 80px;
+}
+
+.fonctionnement h2{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    font-size: 28px;
+}
+
+.fonctionnement .etapes-fonctionnement{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.fonctionnement .etape{
+    margin: 0;
+}
+
+.fonctionnement .etape div{
+    display: flex;
+    width: auto;
+    min-width: 330px;
+    flex-wrap: wrap;
+    background-color: #F3F3F3;
+    padding: 15px 30px 15px 30px;
+    border-radius: 25px;
+    box-shadow: 2px 1px 8px -5px #000000;
+    margin-top: 8px;
+}
+
+.fonctionnement .etape span{
+    background-color: #9356DC;
+    border-radius: 25px;
+    padding: 10px;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    width: 40px;
+    text-align: center;
+    position: absolute;
+    font-size: 16px;
+    margin-left: -15px;
+}
+
+.fonctionnement .etape h3{
+    margin-bottom: 0;
+    margin-top: 0px;
+}
+
+.fonctionnement .etape i{
+    color: #3F3F3F;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 25px;
+    opacity: 1;
+}
+
+.fonctionnement .etape .fa-mobile-alt:hover{
+    color: #9356DC;
+}
+
+.fonctionnement .etape .fa-list-ul:hover{
+    color: #9356DC;
+}
+
+.fonctionnement .etape .fa-store:hover{
+    color: #9356DC;
+}
+
+
+/* Restaurants */
+
+#restaurants{
+    background-color: #F3F3F3;
+}
+
+#restaurants h2{
+    text-align: center;
+    margin: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-size: 28px;
+}
+
+#restaurants .container{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: content-box;
+}
+
+#restaurants .container .liste-restaurants{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 45%;
+    margin-bottom: 50px;
+}
+
+#restaurants .container .liste-restaurants a{
+    width: 100%;
+    margin-bottom: 25px;
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 25px;
+    height: 100%;
+    box-shadow: 5px 5px 5px 5px #E2E2E2;
+}
+
+#restaurants .container .liste-restaurants a .restaurant-image{
+    position: relative;
+}
+
+#restaurants .container .liste-restaurants a .restaurant-image .nouveau{
+    color: #2a9278;
+    background-color: #99e2d0;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-weight: 500;
+}
+
+#restaurants .container .liste-restaurants a img{
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    border-radius: 25px 25px 0px 0px;
+}
+
+#restaurants .container .liste-restaurants a .contenu-article{
+    margin-left: 20px;
+    position: relative;
+}
+
+#restaurants .container .liste-restaurants a .contenu-article h3{
+    font-size: 25px;
+    margin-bottom: 0;
+}
+
+#restaurants .container .liste-restaurants a .contenu-article p{
+    font-size: 18px;
+}
+
+#restaurants .container .liste-restaurants a .contenu-article i{
+    font-size: 40px;
+    position: absolute;
+    right: 45px;
+    top: 5px;
+}
+
+#restaurants .container .liste-restaurants a .contenu-article i:hover{
+        opacity: 1;
+}
+
+.fa-solid{
+    color: transparent;
+    background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: all 300ms ease-in-out
+}
+
+.fa-utensils{
+    opacity: 1;
+    color: white;
+}
+
+.fa-handshake-angle{
+    opacity: 1;
+    color: white;
+}
+
+/* Footer */
+
+.colonnefooter{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.colonnefooter .logofooter{
+    font-family: "Shrikhand";
+    font-size: 30px;
+}
+
+.colonnefooter ul{
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.colonnefooter ul a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.colonnefooter ul li{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.colonnefooter ul li a i{
+    margin-right: 10px;
+    opacity: 1;
+    color: white;
+}
+
+.alignement{
+    margin-right: 30px;
+}
+
+.colonnefooter ul a li p{
+    margin: 5px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1200px){
+    .fonctionnement .etapes-fonctionnement{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .fonctionnement .etapes-fonctionnement .etape{
+        margin: 0px 20px 20px 20px;
+    }
+}
+
+@media (max-width: 768px){
+    .fonctionnement .etapes-fonctionnement{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fonctionnement .etapes-fonctionnement .etape{
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .fonctionnement .etapes-fonctionnement .etape div{
+        display: flex;
+        justify-content: center;
+    }
+
+    #restaurants .container{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 60px;
+    }
+
+    #restaurants .container .liste-restaurants{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    #restaurants .container .liste-restaurants a{
+        margin-bottom: 0;
+    }
+
+    .colonnefooter{
+        text-align: left;
+        margin-left: 30px;
+    }
+
+    .colonnefooter ul li{
+        display: block;
+    }
+
+    .colonnefooter ul li a{
+        justify-content: flex-start;
+    }
+
+    .colonnefooter ul li a .fa-handshake-angle{
+        margin: 2px;
+    }
+}
+
+@media (max-width: 500px){
+    .fonctionnement .etapes-fonctionnement .etape span{
+        padding: 2px;
+        width: 20px;
+        font-size: 15px;
+        margin-top: 40px;
+    }
+
+    .fonctionnement .etapes-fonctionnement .etape div{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        justify-content: left;
+    }
+
+    .fonctionnement .etapes-fonctionnement .etape div i{
+        font-size: 19px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 350px){
+    .fonctionnement{
+        padding-bottom: 40px;
+    }
+    
+    .fonctionnement h2{
+        margin-bottom: 40px;
+    }
+
+    .fonctionnement .etapes-fonctionnement .etape{
+        margin-right: 50px;
+        margin-left: 30px;
+    }
+
+    .fonctionnement .etapes-fonctionnement .etape div{
+        min-width: 290px;
+    }
+
+    .fonctionnement .etapes-fonctionnement .etape div h3{
+        font-size: 15px;
+    }
+
+    #restaurants .container .liste-restaurants a .contenu-article h3{
+        font-size: 22px;
+    }
 }
