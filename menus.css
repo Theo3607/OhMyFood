@@ -1,6 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
+
+.appear {
+  opacity: 0;
+  margin-top: -20px;
+  padding-top: 20px;
+}
+
+.appear1 {
+  -webkit-animation: appear 2s linear ;
+  animation: appear 2s ease-in ;
+  animation-fill-mode: forwards;
+}
+
+.appear2 {
+  -webkit-animation: appear 4s linear ;
+  animation: appear 4s ease-in ;
+  animation-fill-mode: forwards;
+}
+
+.appear3 {
+  -webkit-animation: appear 6s linear ;
+  animation: appear 6s ease-in ;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+  0% { opacity: 0; margin-top: -20px;}
+  50% { opacity: 0; margin-top: -20px;}
+  100% { opacity: 1; margin-top: 0;}
+}
+
+
 *{
     box-sizing: border-box;
 }
@@ -379,7 +411,7 @@ header {
 .bouton-commander:hover{
     opacity: 0.85;
     box-shadow: 0px 1px 8px 2px #000000;
-    
+
 }
 
 /* Footer */

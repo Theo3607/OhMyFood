@@ -24,7 +24,18 @@ footer{
 }
 
 /* LOADING SPINNER */
-
+.loader-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background-color: white;
+  z-index: 3000;
+  -webkit-animation: disapear 3s linear ;
+  animation: disapear 3s ease-in ;
+  animation-fill-mode: forwards;
+}
 #loader {
     position: fixed;
     left: 50%;
@@ -40,10 +51,16 @@ footer{
     animation: spin 3s ease-in ;
     animation-fill-mode: forwards;
   }
-  
+
   @keyframes spin {
     0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); opacity: 0; visibility: hidden;}
+    100% { transform: rotate(1200deg);}
+  }
+
+  @keyframes disapear {
+    0% { opacity: 1; display: block;}
+    50% { opacity: 1; display: block;}
+    100% { opacity: 0; display: none; visibility: hidden;}
   }
 
 
@@ -129,7 +146,7 @@ header {
 .bouton-explorer:hover{
     opacity: 0.85;
     box-shadow: 0px 1px 8px 2px #000000;
-    
+
 }
 
 /* Fonctionnement */
@@ -451,7 +468,7 @@ header {
     .fonctionnement{
         padding-bottom: 40px;
     }
-    
+
     .fonctionnement h2{
         margin-bottom: 40px;
     }
