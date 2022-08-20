@@ -390,11 +390,17 @@ header {
     }
 
     .fonctionnement .etapes-fonctionnement .etape{
-        margin: 0px 20px 20px 20px;
+        margin: 0px 20px 20px 30px;
     }
 }
 
 @media (max-width: 768px){
+    .fonctionnement h2{
+        text-align: left;
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+
     .fonctionnement .etapes-fonctionnement{
         display: flex;
         flex-direction: column;
@@ -411,6 +417,12 @@ header {
         justify-content: center;
     }
 
+    #restaurants h2{
+        text-align: left;
+        margin-left: 30px;
+        padding-bottom: 30px;
+    }
+
     #restaurants .container{
         display: flex;
         flex-direction: column;
@@ -424,6 +436,10 @@ header {
 
     #restaurants .container .liste-restaurants a{
         margin-bottom: 0;
+    }
+
+    #restaurants .container .liste-restaurants a .contenu-article p{
+        margin-top: 0;
     }
 
     .colonnefooter{
@@ -475,7 +491,6 @@ header {
 
     .fonctionnement .etapes-fonctionnement .etape{
         margin-right: 50px;
-        margin-left: 30px;
     }
 
     .fonctionnement .etapes-fonctionnement .etape div{
@@ -490,3 +505,52 @@ header {
         font-size: 22px;
     }
 }
+
+@media (max-width: 320px){
+
+    .intro h1,p,form{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .fonctionnement .etapes-fonctionnement .etape{
+        width: 89%;
+    }
+
+    .fonctionnement .etapes-fonctionnement .etape div{
+        min-width: 100px;
+        margin-right: 20px;
+    }
+
+    .fonctionnement .etapes-fonctionnement .etape div h3{
+        font-size: 12px;
+    }
+
+    .fonctionnement h2{
+        margin-left: 15px;
+    }
+
+    #restaurants h2{
+        margin-left: 15px;
+    }
+
+    #restaurants .container .liste-restaurants a .contenu-article h3{
+        font-size: 20px;
+    }
+
+    #restaurants .container .liste-restaurants a .contenu-article p{
+        font-size: 16px;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    #restaurants .container .liste-restaurants a .contenu-article i{
+        font-size: 30px;
+        right: 25px;
+        position: absolute;
+    }
+
+    #loader{
+        left: 55%;
+    }
+  }
